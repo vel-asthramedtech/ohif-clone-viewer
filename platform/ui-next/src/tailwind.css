@@ -4,91 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* OHIF Red Theme */
-
-@layer base {
-  :root {
-    --highlight: 0 74% 63%; /* Red highlight */
-    --neutral: 0 22% 59%; /* Neutral red-gray */
-    --neutral-light: 0 69% 81%; /* Light red-pink */
-    --neutral-dark: 0 16% 21%; /* Dark red-gray */
-    --background: 0 62% 5%; /* Very dark red background */
-    --foreground: 0 0% 98%; /* White text */
-    --secondary: 0 66% 48%; /* Medium red secondary */
-    --secondary-foreground: 0 50% 84%;
-    --secondary-dark: 0 45% 25%; /* Add this - darker red variant */
-    --card: 0 64% 10%; /* Dark red card background */
-    --card-foreground: 0 0% 98%; /* White text on cards */
-    --popover: 0 90% 15%; /* Dark red popover */
-    --popover-foreground: 0 0% 98%; /* White popover text */
-    --primary: 0 98% 60%; /* Bright red primary */
-    --primary-foreground: 0 0% 98%; /* White text on red */
-    --secondary: 0 66% 48%; /* Medium red secondary */
-    --secondary-foreground: 0 50% 84%; /* Light red-pink text */
-    --muted: 0 64% 10%; /* Muted dark red */
-    --muted-foreground: 0 46% 65%; /* Muted red-gray text */
-    --accent: 0 79% 24%; /* Dark red accent */
-    --accent-foreground: 0 0% 98%; /* White accent text */
-    --destructive: 0 84% 60%; /* Bright red for destructive actions */
-    --destructive-foreground: 0 0% 98%; /* White destructive text */
-    --border: 0 0% 14.9%; /* Dark border */
-    --input: 0 52% 30%; /* Red-tinted input background */
-    --ring: 0 98% 60%; /* Red focus ring */
-    --chart-1: 0 70% 50%; /* Red chart color */
-    --chart-2: 15 60% 45%; /* Orange-red chart color */
-    --chart-3: 345 80% 55%; /* Pink-red chart color */
-    --chart-4: 330 65% 60%; /* Magenta-red chart color */
-    --chart-5: 10 75% 55%; /* Orange-red chart color */
-    --radius: 0.5rem;
-
-    /* Alert/notification colors with red theme */
-    --success-bg: hsl(120, 85%, 96%); /* Keep green for success */
-    --success-border: hsl(122, 92%, 91%);
-    --success-text: hsl(120, 100%, 27%);
-
-    --info-bg: hsl(0, 100%, 97%); /* Light red for info */
-    --info-border: hsl(0, 91%, 91%);
-    --info-text: hsl(0, 92%, 45%);
-
-    --warning-bg: hsl(39, 100%, 97%); /* Orange for warnings */
-    --warning-border: hsl(39, 91%, 91%);
-    --warning-text: hsl(31, 92%, 45%);
-
-    --error-bg: hsl(0, 100%, 97%); /* Bright red for errors */
-    --error-border: hsl(0, 100%, 94%);
-    --error-text: hsl(0, 100%, 45%);
-  }
-
-  .dark {
-    --background: 0 0% 3.9%; /* Very dark background */
-    --foreground: 0 0% 98%; /* White text */
-    --card: 0 64% 10%; /* Dark red cards */
-    --card-foreground: 0 0% 98%; /* White card text */
-    --popover: 0 0% 3.9%; /* Dark popover */
-    --popover-foreground: 0 0% 98%; /* White popover text */
-    --primary: 0 98% 60%; /* Bright red primary */
-    --primary-foreground: 0 0% 98%; /* White primary text */
-    --secondary: 0 0% 14.9%; /* Dark secondary */
-    --secondary-foreground: 0 0% 98%;
-    --secondary-dark: 0 0% 8%;
-    --muted: 0 0% 14.9%; /* Dark muted */
-    --muted-foreground: 0 0% 63.9%; /* Gray muted text */
-    --accent: 0 0% 14.9%; /* Dark accent */
-    --accent-foreground: 0 0% 98%; /* White accent text */
-    --destructive: 0 84% 60%; /* Bright red destructive */
-    --destructive-foreground: 0 0% 98%; /* White destructive text */
-    --border: 0 0% 14.9%; /* Dark border */
-    --input: 0 52% 30%; /* Red-tinted input */
-    --ring: 0 98% 60%; /* Red focus ring */
-    --chart-1: 0 70% 50%; /* Red charts */
-    --chart-2: 15 60% 45%;
-    --chart-3: 345 80% 55%;
-    --chart-4: 330 65% 60%;
-    --chart-5: 10 75% 55%;
-  }
-}
-
-/* ORIGINAL THEME for comparison and testing
+/* OHIF Theme */
 
 @layer base {
   :root {
@@ -158,6 +74,68 @@
     --border: 0 0% 14.9%;
     --input: 236 52% 30%;
     --ring: 214 98% 60%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+/* ORIGINAL THEME for comparison and testing
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 72.22% 50.59%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5% 64.9%;
+    --radius: 0.5rem;
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;

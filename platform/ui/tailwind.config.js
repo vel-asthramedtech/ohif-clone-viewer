@@ -1,4 +1,10 @@
 module.exports = {
+  // Note: in Tailwind 3.0, JIT will purge unused styles by default
+  // but in development, it is often useful to disable this to see
+  // and try out all the styles that are available.
+  // ...(process.env.NODE_ENV === 'development' && {
+  //   safelist: [{ pattern: /.*/ }],
+  // }),
   content: ['./src/**/*.{jsx,js,ts,tsx,css,mdx}'],
   theme: {
     screens: {
@@ -18,44 +24,28 @@ module.exports = {
       initial: 'initial',
       inherit: 'inherit',
 
-      // FF6B6B Primary Color Palette
-      ff6b6b: {
-        50: '#FFF5F5',
-        100: '#FFE3E3',
-        200: '#FFC9C9',
-        300: '#FFA8A8',
-        400: '#FF8787',
-        500: '#FF6B6B', // Main FF6B6B color
-        600: '#FA5252',
-        700: '#F03E3E',
-        800: '#E03131',
-        900: '#C92A2A',
-        950: '#A61E1E',
-      },
-
       aqua: {
         pale: '#7bb2ce',
       },
 
       primary: {
-        light: '#FF8787',
-        main: '#FF6B6B',
-        dark: '#F03E3E',
-        active: '#FA5252',
+        light: '#5acce6',
+        main: '#0944b3',
+        dark: '#090c29',
+        active: '#348cfd',
       },
-
       inputfield: {
-        main: '#FF6B6B',
-        disabled: '#C92A2A',
-        focus: '#FF8787',
-        placeholder: '#666',
+        main: '#3a3f99',
+        disabled: '#2b166b',
+        focus: '#5acce6',
+        placeholder: '#39383f',
       },
 
       secondary: {
-        light: '#FFA8A8',
-        main: '#FA5252',
-        dark: '#E03131',
-        active: '#F03E3E',
+        light: '#3a3f99',
+        main: '#2b166b',
+        dark: '#041c4a',
+        active: '#1f1f27',
       },
 
       indigo: {
@@ -67,49 +57,44 @@ module.exports = {
         light: '#a19fad',
         main: '#fff',
         dark: '#726f7e',
-        active: '#FF6B6B', // FF6B6B for active states
+        active: '#2c3074',
       },
-
       bkg: {
-        low: '#0a0a0a',
-        med: '#1a1a1a',
-        full: '#2a2a2a',
+        low: '#050615',
+        med: '#090C29',
+        full: '#041C4A',
       },
-
       info: {
         primary: '#FFFFFF',
-        secondary: '#FF6B6B', // FF6B6B as secondary info color
+        secondary: '#7BB2CE',
       },
-
       actions: {
-        primary: '#FF6B6B', // FF6B6B for primary actions
-        highlight: '#FF8787', // Lighter FF6B6B for highlights
-        hover: 'rgba(255, 107, 107, 0.2)', // FF6B6B with opacity
+        primary: '#348CFD',
+        highlight: '#5ACCE6',
+        hover: 'rgba(52, 140, 253, 0.2)',
       },
-
       customgreen: {
-        100: '#51CF66',
-        200: '#40C057',
+        100: '#05D97C',
+        200: '#0FD97C',
       },
 
       customblue: {
-        10: '#FF6B6B',
-        20: '#FA5252',
-        30: '#F03E3E',
-        40: '#E03131',
-        50: '#C92A2A',
-        80: '#A61E1E',
-        100: '#FFF5F5',
-        200: '#FFE3E3',
-        300: '#FFC9C9',
-        400: '#FFA8A8',
+        10: '#0A163F',
+        20: '#0B1F54',
+        30: '#09286e',
+        40: '#0E307F',
+        50: '#0F3A94',
+        80: '#1454D4',
+        100: '#c4fdff',
+        200: '#38daff',
+        300: '#1D204D',
+        400: '#90A0C1',
       },
 
       customgray: {
-        100: '#2a2a2a',
+        100: '#262943',
       },
 
-      // Standard color palette (keeping original)
       gray: {
         100: '#f7fafc',
         200: '#edf2f7',
@@ -122,15 +107,15 @@ module.exports = {
         900: '#1a202c',
       },
       red: {
-        100: '#FFF5F5',
-        200: '#FFE3E3',
-        300: '#FFC9C9',
-        400: '#FFA8A8',
-        500: '#FF6B6B', // FF6B6B as red-500
-        600: '#FA5252',
-        700: '#F03E3E',
-        800: '#E03131',
-        900: '#C92A2A',
+        100: '#fff5f5',
+        200: '#fed7d7',
+        300: '#feb2b2',
+        400: '#fc8181',
+        500: '#f56565',
+        600: '#e53e3e',
+        700: '#c53030',
+        800: '#9b2c2c',
+        900: '#742a2a',
       },
       orange: {
         100: '#fffaf0',
@@ -252,9 +237,8 @@ module.exports = {
       xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
-      outline: '0 0 0 3px rgba(255, 107, 107, 0.5)', // FF6B6B outline
+      outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
       none: 'none',
-      ff6b6b: '0 0 0 3px rgba(255, 107, 107, 0.3)', // Custom FF6B6B shadow
     },
     container: {},
     cursor: {
@@ -268,7 +252,6 @@ module.exports = {
     },
     fill: {
       current: 'currentColor',
-      ff6b6b: '#FF6B6B',
     },
     fontSize: {
       xxs: '0.6875rem', // 11px
@@ -795,4 +778,3 @@ module.exports = {
   corePlugins: {},
   plugins: [],
 };
-      

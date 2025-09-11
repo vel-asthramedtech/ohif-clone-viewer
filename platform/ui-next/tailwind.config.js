@@ -56,11 +56,9 @@ module.exports = {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
         },
-
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
-          dark: 'hsl(var(--secondary-dark))', // Add this
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
@@ -102,20 +100,19 @@ module.exports = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
-      // Red Color Theme - Dark backgrounds with red accents
       bkg: {
-        low: '#150505', // Very dark red-black
-        med: '#290909', // Dark red-brown
-        full: '#4A0C0C', // Dark red
+        low: '#050615',
+        med: '#090C29',
+        full: '#041C4A',
       },
       info: {
-        primary: '#FFFFFF', // Keep white for contrast
-        secondary: '#CE7B7B', // Muted red-pink for secondary text
+        primary: '#FFFFFF',
+        secondary: '#7BB2CE',
       },
       actions: {
-        primary: '#FD3434', // Bright red for primary actions
-        highlight: '#E65A5A', // Lighter red for highlights
-        hover: 'rgba(253, 52, 52, 0.2)', // Red with transparency for hover states
+        primary: '#348CFD',
+        highlight: '#5ACCE6',
+        hover: 'rgba(52, 140, 253, 0.2)',
       },
     },
   },
