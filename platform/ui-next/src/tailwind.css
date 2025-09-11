@@ -1,0 +1,280 @@
+@import './assets/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* OHIF Red Theme */
+
+@layer base {
+  :root {
+    --highlight: 0 74% 63%; /* Red highlight */
+    --neutral: 0 22% 59%; /* Neutral red-gray */
+    --neutral-light: 0 69% 81%; /* Light red-pink */
+    --neutral-dark: 0 16% 21%; /* Dark red-gray */
+    --background: 0 62% 5%; /* Very dark red background */
+    --foreground: 0 0% 98%; /* White text */
+    --secondary: 0 66% 48%; /* Medium red secondary */
+    --secondary-foreground: 0 50% 84%;
+    --secondary-dark: 0 45% 25%; /* Add this - darker red variant */
+    --card: 0 64% 10%; /* Dark red card background */
+    --card-foreground: 0 0% 98%; /* White text on cards */
+    --popover: 0 90% 15%; /* Dark red popover */
+    --popover-foreground: 0 0% 98%; /* White popover text */
+    --primary: 0 98% 60%; /* Bright red primary */
+    --primary-foreground: 0 0% 98%; /* White text on red */
+    --secondary: 0 66% 48%; /* Medium red secondary */
+    --secondary-foreground: 0 50% 84%; /* Light red-pink text */
+    --muted: 0 64% 10%; /* Muted dark red */
+    --muted-foreground: 0 46% 65%; /* Muted red-gray text */
+    --accent: 0 79% 24%; /* Dark red accent */
+    --accent-foreground: 0 0% 98%; /* White accent text */
+    --destructive: 0 84% 60%; /* Bright red for destructive actions */
+    --destructive-foreground: 0 0% 98%; /* White destructive text */
+    --border: 0 0% 14.9%; /* Dark border */
+    --input: 0 52% 30%; /* Red-tinted input background */
+    --ring: 0 98% 60%; /* Red focus ring */
+    --chart-1: 0 70% 50%; /* Red chart color */
+    --chart-2: 15 60% 45%; /* Orange-red chart color */
+    --chart-3: 345 80% 55%; /* Pink-red chart color */
+    --chart-4: 330 65% 60%; /* Magenta-red chart color */
+    --chart-5: 10 75% 55%; /* Orange-red chart color */
+    --radius: 0.5rem;
+
+    /* Alert/notification colors with red theme */
+    --success-bg: hsl(120, 85%, 96%); /* Keep green for success */
+    --success-border: hsl(122, 92%, 91%);
+    --success-text: hsl(120, 100%, 27%);
+
+    --info-bg: hsl(0, 100%, 97%); /* Light red for info */
+    --info-border: hsl(0, 91%, 91%);
+    --info-text: hsl(0, 92%, 45%);
+
+    --warning-bg: hsl(39, 100%, 97%); /* Orange for warnings */
+    --warning-border: hsl(39, 91%, 91%);
+    --warning-text: hsl(31, 92%, 45%);
+
+    --error-bg: hsl(0, 100%, 97%); /* Bright red for errors */
+    --error-border: hsl(0, 100%, 94%);
+    --error-text: hsl(0, 100%, 45%);
+  }
+
+  .dark {
+    --background: 0 0% 3.9%; /* Very dark background */
+    --foreground: 0 0% 98%; /* White text */
+    --card: 0 64% 10%; /* Dark red cards */
+    --card-foreground: 0 0% 98%; /* White card text */
+    --popover: 0 0% 3.9%; /* Dark popover */
+    --popover-foreground: 0 0% 98%; /* White popover text */
+    --primary: 0 98% 60%; /* Bright red primary */
+    --primary-foreground: 0 0% 98%; /* White primary text */
+    --secondary: 0 0% 14.9%; /* Dark secondary */
+    --secondary-foreground: 0 0% 98%;
+    --secondary-dark: 0 0% 8%;
+    --muted: 0 0% 14.9%; /* Dark muted */
+    --muted-foreground: 0 0% 63.9%; /* Gray muted text */
+    --accent: 0 0% 14.9%; /* Dark accent */
+    --accent-foreground: 0 0% 98%; /* White accent text */
+    --destructive: 0 84% 60%; /* Bright red destructive */
+    --destructive-foreground: 0 0% 98%; /* White destructive text */
+    --border: 0 0% 14.9%; /* Dark border */
+    --input: 0 52% 30%; /* Red-tinted input */
+    --ring: 0 98% 60%; /* Red focus ring */
+    --chart-1: 0 70% 50%; /* Red charts */
+    --chart-2: 15 60% 45%;
+    --chart-3: 345 80% 55%;
+    --chart-4: 330 65% 60%;
+    --chart-5: 10 75% 55%;
+  }
+}
+
+/* ORIGINAL THEME for comparison and testing
+
+@layer base {
+  :root {
+    --highlight: 191 74% 63%;
+    --neutral: 213 22% 59%;
+    --neutral-light: 214 69% 81%;
+    --neutral-dark: 214 16% 21%;
+    --background: 236 62% 5%;
+    --foreground: 0 0% 98%;
+    --card: 234 64% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 219 90% 15%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 214 98% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 214 66% 48%;
+    --secondary-foreground: 200 50% 84%;
+    --muted: 234 64% 10%;
+    --muted-foreground: 200 46% 65%;
+    --accent: 217 79% 24%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 236 52% 30%;
+    --ring: 214 98% 60%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.5rem;
+    --success-bg: hsl(143, 85%, 96%);
+    --success-border: hsl(145, 92%, 91%);
+    --success-text: hsl(140, 100%, 27%);
+
+    --info-bg: hsl(208, 100%, 97%);
+    --info-border: hsl(221, 91%, 91%);
+    --info-text: hsl(210, 92%, 45%);
+
+    --warning-bg: hsl(49, 100%, 97%);
+    --warning-border: hsl(49, 91%, 91%);
+    --warning-text: hsl(31, 92%, 45%);
+
+    --error-bg: hsl(359, 100%, 97%);
+    --error-border: hsl(359, 100%, 94%);
+    --error-text: hsl(360, 100%, 45%);
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 234 64% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 214 98% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 236 52% 30%;
+    --ring: 214 98% 60%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+*/
+
+/* Theme Copy Example
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 360 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.5rem;
+    --chart-1: ;
+    --chart-2: ;
+    --chart-3: ;
+    --chart-4: ;
+    --chart-5: ;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 360 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263.4 70% 50.4%;
+    --chart-1: ;
+    --chart-2: ;
+    --chart-3: ;
+    --chart-4: ;
+    --chart-5: ;
+  }
+}
+
+*/
+
+/* Updated Playground page styles */
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    @apply !bg-black;
+  }
+}
+
+h2.section-header {
+  @apply py-4 text-2xl font-normal text-white;
+}
+
+h3.section-header {
+  @apply py-3 text-xl text-white;
+}
+
+.row {
+  @apply mb-6 flex flex-row flex-wrap rounded-md border py-10;
+}
+
+.example {
+  @apply flex-initial px-6;
+}
+
+.example2 {
+  @apply flex-initial px-4;
+}
+
+/* Additional CSS edits to components */
+
+/* Tooltip */
+
+.TooltipContent[data-side='bottom'] {
+  animation-name: slideDown;
+}
+
+/* Custom CSS to hide default number input arrows */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  @apply appearance-none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield; /* For Firefox */
+}

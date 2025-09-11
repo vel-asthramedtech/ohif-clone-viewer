@@ -1,0 +1,132 @@
+/* IMPORT CUSTOM FONT */
+@import './assets/styles/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Truncate 2 lines utility */
+.truncate-2-lines {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.3;
+  height: 2.1rem;
+}
+
+/* disabled class - used for icons and divs based on context */
+.ohif-disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  user-select: none;
+  opacity: 0.5;
+}
+
+@layer base {
+  :root {
+    /* FF6B6B Theme Variables */
+    --highlight: 2 84% 70%; /* FF6B6B - primary coral-red */
+    --neutral: 213 22% 59%;
+    --background: 0 0% 5%; /* Very dark background */
+    --foreground: 0 0% 98%;
+    --card: 0 0% 8%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 2 84% 70%; /* FF6B6B */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 2 65% 55%; /* Darker variant of FF6B6B */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 2 70% 35%; /* Much darker FF6B6B variant */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%; /* Slightly different red for destructive actions */
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 18%;
+    --ring: 2 84% 70%; /* FF6B6B for focus rings */
+    --chart-1: 2 84% 70%; /* FF6B6B */
+    --chart-2: 2 75% 60%; /* Variant 1 */
+    --chart-3: 2 65% 50%; /* Variant 2 */
+    --chart-4: 2 55% 40%; /* Variant 3 */
+    --chart-5: 2 45% 30%; /* Variant 4 */
+    --radius: 0.5rem;
+
+    /* Status colors with FF6B6B influence */
+    --success-bg: hsl(140, 45%, 15%);
+    --success-border: hsl(140, 55%, 25%);
+    --success-text: hsl(140, 70%, 60%);
+
+    --info-bg: hsl(200, 45%, 15%);
+    --info-border: hsl(200, 55%, 25%);
+    --info-text: hsl(200, 70%, 60%);
+
+    --warning-bg: hsl(35, 45%, 15%);
+    --warning-border: hsl(35, 55%, 25%);
+    --warning-text: hsl(35, 70%, 60%);
+
+    --error-bg: hsl(2, 45%, 15%);
+    --error-border: hsl(2, 55%, 25%);
+    --error-text: hsl(2, 84%, 70%); /* FF6B6B for errors */
+  }
+
+  .dark {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 2 84% 70%; /* FF6B6B */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 0% 18%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 2 84% 70%; /* FF6B6B */
+    --chart-1: 2 84% 70%;
+    --chart-2: 2 75% 60%;
+    --chart-3: 2 65% 50%;
+    --chart-4: 2 55% 40%;
+    --chart-5: 2 45% 30%;
+  }
+}
+
+/* FF6B6B specific utility classes */
+.bg-ff6b6b {
+  background-color: #FF6B6B;
+}
+
+.text-ff6b6b {
+  color: #FF6B6B;
+}
+
+.border-ff6b6b {
+  border-color: #FF6B6B;
+}
+
+.hover\:bg-ff6b6b:hover {
+  background-color: #FF6B6B;
+}
+
+.hover\:text-ff6b6b:hover {
+  color: #FF6B6B;
+}
+
+.focus\:ring-ff6b6b:focus {
+  --tw-ring-color: #FF6B6B;
+}
