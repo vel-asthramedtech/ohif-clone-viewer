@@ -84,10 +84,11 @@ function Local({ modePath }: LocalProps) {
 
     const query = new URLSearchParams();
 
+    // Force navigation to basic viewer mode
+    let targetRoute = 'viewer'; // Change this to match your basic viewer mode's routeName
+
+    // Handle microscopy studies specially
     if (microscopyExtensionLoaded) {
-      // TODO: for microscopy, we are forcing microscopy mode, which is not ideal.
-      //     we should make the local drag and drop navigate to the worklist and
-      //     there user can select microscopy mode
       const smStudies = studies.filter(id => {
         const study = DicomMetadataStore.getStudy(id);
         return (
@@ -97,16 +98,17 @@ function Local({ modePath }: LocalProps) {
 
       if (smStudies.length > 0) {
         smStudies.forEach(id => query.append('StudyInstanceUIDs', id));
-
-        modePath = 'microscopy';
+        targetRoute = 'microscopy';
       }
     }
 
-    // Todo: navigate to work list and let user select a mode
+    // Add all studies to query parameters
     studies.forEach(id => query.append('StudyInstanceUIDs', id));
     query.append('datasources', 'dicomlocal');
 
-    navigate(`/${modePath}?${decodeURIComponent(query.toString())}`);
+    // Navigate directly to basic viewer with the dicomlocal data source
+    // This matches your route structure: /:modeId/:sourceType/?queryParameters
+    navigate(`/${targetRoute}/dicomlocal?${decodeURIComponent(query.toString())}`);
   };
 
   // Set body style
