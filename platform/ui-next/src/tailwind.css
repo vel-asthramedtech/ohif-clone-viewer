@@ -4,87 +4,87 @@
 @tailwind components;
 @tailwind utilities;
 
-/* OHIF Red Theme */
+/* OHIF Teal Theme */
 
 @layer base {
   :root {
-    --highlight: 0 74% 63%; /* Red highlight */
-    --neutral: 0 22% 59%; /* Neutral red-gray */
-    --neutral-light: 0 69% 81%; /* Light red-pink */
-    --neutral-dark: 0 16% 21%; /* Dark red-gray */
-    --background: 0 62% 5%; /* Very dark red background */
+    --highlight: 177 51% 63%; /* Teal highlight */
+    --neutral: 0 0% 59%; /* Neutral gray */
+    --neutral-light: 177 20% 81%; /* Light teal-gray */
+    --neutral-dark: 0 0% 21%; /* Dark gray */
+    --background: 0 0% 0%; /* Black background */
     --foreground: 0 0% 98%; /* White text */
-    --secondary: 0 66% 48%; /* Medium red secondary */
-    --secondary-foreground: 0 50% 84%;
-    --secondary-dark: 0 45% 25%; /* Add this - darker red variant */
-    --card: 0 64% 10%; /* Dark red card background */
+    --secondary: 0 0% 13%; /* Dark gray secondary */
+    --secondary-foreground: 0 0% 84%;
+    --secondary-dark: 0 0% 8%; /* Add this - darker gray variant */
+    --card: 0 0% 3%; /* Dark card background */
     --card-foreground: 0 0% 98%; /* White text on cards */
-    --popover: 0 90% 15%; /* Dark red popover */
+    --popover: 0 0% 10%; /* Dark popover */
     --popover-foreground: 0 0% 98%; /* White popover text */
-    --primary: 0 98% 60%; /* Bright red primary */
-    --primary-foreground: 0 0% 98%; /* White text on red */
-    --secondary: 0 66% 48%; /* Medium red secondary */
-    --secondary-foreground: 0 50% 84%; /* Light red-pink text */
-    --muted: 0 64% 10%; /* Muted dark red */
-    --muted-foreground: 0 46% 65%; /* Muted red-gray text */
-    --accent: 0 79% 24%; /* Dark red accent */
+    --primary: 177 51% 63%; /* Teal primary */
+    --primary-foreground: 0 0% 0%; /* Black text on teal */
+    --secondary: 0 0% 13%; /* Dark gray secondary */
+    --secondary-foreground: 0 0% 84%; /* Light gray text */
+    --muted: 0 0% 6%; /* Muted dark gray */
+    --muted-foreground: 0 0% 65%; /* Muted gray text */
+    --accent: 0 0% 20%; /* Dark accent */
     --accent-foreground: 0 0% 98%; /* White accent text */
-    --destructive: 0 84% 60%; /* Bright red for destructive actions */
+    --destructive: 0 84% 60%; /* Red for destructive actions */
     --destructive-foreground: 0 0% 98%; /* White destructive text */
     --border: 0 0% 14.9%; /* Dark border */
-    --input: 0 52% 30%; /* Red-tinted input background */
-    --ring: 0 98% 60%; /* Red focus ring */
-    --chart-1: 0 70% 50%; /* Red chart color */
-    --chart-2: 15 60% 45%; /* Orange-red chart color */
-    --chart-3: 345 80% 55%; /* Pink-red chart color */
-    --chart-4: 330 65% 60%; /* Magenta-red chart color */
-    --chart-5: 10 75% 55%; /* Orange-red chart color */
+    --input: 0 0% 10%; /* Dark input background */
+    --ring: 177 51% 63%; /* Teal focus ring */
+    --chart-1: 177 51% 63%; /* Teal chart color */
+    --chart-2: 177 30% 45%; /* Darker teal chart color */
+    --chart-3: 30 80% 55%; /* Orange chart color */
+    --chart-4: 280 65% 60%; /* Purple chart color */
+    --chart-5: 340 75% 55%; /* Pink chart color */
     --radius: 0.5rem;
 
-    /* Alert/notification colors with red theme */
-    --success-bg: hsl(120, 85%, 96%); /* Keep green for success */
-    --success-border: hsl(122, 92%, 91%);
-    --success-text: hsl(120, 100%, 27%);
+    /* Alert/notification colors with teal theme */
+    --success-bg: hsl(177, 85%, 96%); /* Light teal for success */
+    --success-border: hsl(177, 92%, 91%);
+    --success-text: hsl(177, 100%, 27%);
 
-    --info-bg: hsl(0, 100%, 97%); /* Light red for info */
-    --info-border: hsl(0, 91%, 91%);
-    --info-text: hsl(0, 92%, 45%);
+    --info-bg: hsl(177, 100%, 97%); /* Light teal for info */
+    --info-border: hsl(177, 91%, 91%);
+    --info-text: hsl(177, 92%, 45%);
 
     --warning-bg: hsl(39, 100%, 97%); /* Orange for warnings */
     --warning-border: hsl(39, 91%, 91%);
     --warning-text: hsl(31, 92%, 45%);
 
-    --error-bg: hsl(0, 100%, 97%); /* Bright red for errors */
+    --error-bg: hsl(0, 100%, 97%); /* Red for errors */
     --error-border: hsl(0, 100%, 94%);
     --error-text: hsl(0, 100%, 45%);
   }
 
   .dark {
-    --background: 0 0% 3.9%; /* Very dark background */
+    --background: 0 0% 0%; /* Black background */
     --foreground: 0 0% 98%; /* White text */
-    --card: 0 64% 10%; /* Dark red cards */
+    --card: 0 0% 3%; /* Dark cards */
     --card-foreground: 0 0% 98%; /* White card text */
-    --popover: 0 0% 3.9%; /* Dark popover */
+    --popover: 0 0% 3%; /* Dark popover */
     --popover-foreground: 0 0% 98%; /* White popover text */
-    --primary: 0 98% 60%; /* Bright red primary */
-    --primary-foreground: 0 0% 98%; /* White primary text */
-    --secondary: 0 0% 14.9%; /* Dark secondary */
+    --primary: 177 51% 63%; /* Teal primary */
+    --primary-foreground: 0 0% 0%; /* Black primary text */
+    --secondary: 0 0% 10%; /* Dark secondary */
     --secondary-foreground: 0 0% 98%;
-    --secondary-dark: 0 0% 8%;
-    --muted: 0 0% 14.9%; /* Dark muted */
+    --secondary-dark: 0 0% 5%;
+    --muted: 0 0% 10%; /* Dark muted */
     --muted-foreground: 0 0% 63.9%; /* Gray muted text */
-    --accent: 0 0% 14.9%; /* Dark accent */
+    --accent: 0 0% 15%; /* Dark accent */
     --accent-foreground: 0 0% 98%; /* White accent text */
-    --destructive: 0 84% 60%; /* Bright red destructive */
+    --destructive: 0 84% 60%; /* Red destructive */
     --destructive-foreground: 0 0% 98%; /* White destructive text */
     --border: 0 0% 14.9%; /* Dark border */
-    --input: 0 52% 30%; /* Red-tinted input */
-    --ring: 0 98% 60%; /* Red focus ring */
-    --chart-1: 0 70% 50%; /* Red charts */
-    --chart-2: 15 60% 45%;
-    --chart-3: 345 80% 55%;
-    --chart-4: 330 65% 60%;
-    --chart-5: 10 75% 55%;
+    --input: 0 0% 10%; /* Dark input */
+    --ring: 177 51% 63%; /* Teal focus ring */
+    --chart-1: 177 51% 63%; /* Teal charts */
+    --chart-2: 177 30% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
 

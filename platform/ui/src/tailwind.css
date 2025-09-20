@@ -1,6 +1,5 @@
 /* IMPORT CUSTOM FONT */
 @import './assets/styles/fonts.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -31,102 +30,71 @@
 
 @layer base {
   :root {
-    /* FF6B6B Theme Variables */
-    --highlight: 2 84% 70%; /* FF6B6B - primary coral-red */
-    --neutral: 213 22% 59%;
-    --background: 0 0% 5%; /* Very dark background */
+    --highlight: 177 51% 63%;
+    --neutral: 0 0% 59%;
+    --background: 0 0% 0%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 8%; /* Slightly lighter than background */
+    --card: 0 0% 3%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 12%;
+    --popover: 0 0% 10%;
     --popover-foreground: 0 0% 98%;
-    --primary: 2 84% 70%; /* FF6B6B */
-    --primary-foreground: 0 0% 98%;
-    --secondary: 2 65% 55%; /* Darker variant of FF6B6B */
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
+    --primary: 177 51% 63%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 0 0% 84%;
+    --muted: 0 0% 6%;
     --muted-foreground: 0 0% 65%;
-    --accent: 2 70% 35%; /* Much darker FF6B6B variant */
+    --accent: 0 0% 20%;
     --accent-foreground: 0 0% 98%;
-    --destructive: 0 84% 60%; /* Slightly different red for destructive actions */
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 20%;
-    --input: 0 0% 18%;
-    --ring: 2 84% 70%; /* FF6B6B for focus rings */
-    --chart-1: 2 84% 70%; /* FF6B6B */
-    --chart-2: 2 75% 60%; /* Variant 1 */
-    --chart-3: 2 65% 50%; /* Variant 2 */
-    --chart-4: 2 55% 40%; /* Variant 3 */
-    --chart-5: 2 45% 30%; /* Variant 4 */
+    --border: 0 0% 14.9%;
+    --input: 0 0% 10%;
+    --ring: 177 51% 63%;
+    --chart-1: 177 51% 63%;
+    --chart-2: 177 30% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
     --radius: 0.5rem;
-
-    /* Status colors with FF6B6B influence */
-    --success-bg: hsl(140, 45%, 15%);
-    --success-border: hsl(140, 55%, 25%);
-    --success-text: hsl(140, 70%, 60%);
-
-    --info-bg: hsl(200, 45%, 15%);
-    --info-border: hsl(200, 55%, 25%);
-    --info-text: hsl(200, 70%, 60%);
-
-    --warning-bg: hsl(35, 45%, 15%);
-    --warning-border: hsl(35, 55%, 25%);
-    --warning-text: hsl(35, 70%, 60%);
-
-    --error-bg: hsl(2, 45%, 15%);
-    --error-border: hsl(2, 55%, 25%);
-    --error-text: hsl(2, 84%, 70%); /* FF6B6B for errors */
+    --success-bg: hsl(177, 85%, 96%);
+    --success-border: hsl(177, 92%, 91%);
+    --success-text: hsl(177, 100%, 27%);
+    --info-bg: hsl(177, 100%, 97%);
+    --info-border: hsl(177, 91%, 91%);
+    --info-text: hsl(177, 92%, 45%);
+    --warning-bg: hsl(49, 100%, 97%);
+    --warning-border: hsl(49, 91%, 91%);
+    --warning-text: hsl(31, 92%, 45%);
+    --error-bg: hsl(359, 100%, 97%);
+    --error-border: hsl(359, 100%, 94%);
+    --error-text: hsl(360, 100%, 45%);
   }
 
   .dark {
-    --background: 0 0% 3%;
+    --background: 0 0% 0%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 6%;
+    --card: 0 0% 3%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 8%;
+    --popover: 0 0% 3%;
     --popover-foreground: 0 0% 98%;
-    --primary: 2 84% 70%; /* FF6B6B */
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 18%;
+    --primary: 177 51% 63%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 18%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 0 0% 18%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 15%;
     --accent-foreground: 0 0% 98%;
-    --destructive: 0 84% 60%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 2 84% 70%; /* FF6B6B */
-    --chart-1: 2 84% 70%;
-    --chart-2: 2 75% 60%;
-    --chart-3: 2 65% 50%;
-    --chart-4: 2 55% 40%;
-    --chart-5: 2 45% 30%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 10%;
+    --ring: 177 51% 63%;
+    --chart-1: 177 51% 63%;
+    --chart-2: 177 30% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
-}
-
-/* FF6B6B specific utility classes */
-.bg-ff6b6b {
-  background-color: #FF6B6B;
-}
-
-.text-ff6b6b {
-  color: #FF6B6B;
-}
-
-.border-ff6b6b {
-  border-color: #FF6B6B;
-}
-
-.hover\:bg-ff6b6b:hover {
-  background-color: #FF6B6B;
-}
-
-.hover\:text-ff6b6b:hover {
-  color: #FF6B6B;
-}
-
-.focus\:ring-ff6b6b:focus {
-  --tw-ring-color: #FF6B6B;
 }

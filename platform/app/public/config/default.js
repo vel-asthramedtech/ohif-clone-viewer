@@ -90,7 +90,7 @@ window.config = {
       ],
     },
   ],
-  defaultDataSourceName: 'orthanc',
+  defaultDataSourceName: 'ohif',
   /* Dynamic config allows user to pass "configUrl" query string this allows to load config without recompiling application. The regex will ensure valid configuration source */
   // dangerouslyUseDynamicConfig: {
   //   enabled: true,
