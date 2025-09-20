@@ -84,7 +84,7 @@ function ViewerHeader({ appConfig }: withAppTypes<{ appConfig: AppTypes.Config }
   return (
     <Header
       menuOptions={menuOptions}
-      isReturnEnabled={!!appConfig.showStudyList}
+      isReturnEnabled={false}
       onClickReturnButton={onClickReturnButton}
       WhiteLabeling={appConfig.whiteLabeling}
       Secondary={<Toolbar buttonSection="secondary" />}
@@ -105,7 +105,7 @@ function ViewerHeader({ appConfig }: withAppTypes<{ appConfig: AppTypes.Config }
               commandsManager.run('undo');
             }}
           >
-            <Icons.Undo className="" />
+            <Icons.Undo className="text-white" />
           </Button>
           <Button
             variant="ghost"
@@ -114,7 +114,7 @@ function ViewerHeader({ appConfig }: withAppTypes<{ appConfig: AppTypes.Config }
               commandsManager.run('redo');
             }}
           >
-            <Icons.Redo className="" />
+            <Icons.Redo className="text-white" />
           </Button>
         </div>
       }

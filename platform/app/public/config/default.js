@@ -28,6 +28,23 @@ window.config = {
   investigationalUseDialog: {
     option: 'never',
   },
+  whiteLabeling: {
+    createLogoComponentFn: function (React) {
+      return React.createElement(
+        'a',
+        {
+          target: '_self',
+          rel: 'noopener noreferrer',
+          className: 'text-purple-600 line-through',
+          href: '/',
+        },
+        React.createElement('img', {
+          src: './asthra-logo.svg',
+          className: 'w-48 h-48',
+        })
+      );
+    },
+  },
   // filterQueryParam: false,
   // Defines multi-monitor layouts
   multimonitor: [
@@ -90,7 +107,7 @@ window.config = {
       ],
     },
   ],
-  defaultDataSourceName: 'ohif',
+  defaultDataSourceName: 'orthanc',
   /* Dynamic config allows user to pass "configUrl" query string this allows to load config without recompiling application. The regex will ensure valid configuration source */
   // dangerouslyUseDynamicConfig: {
   //   enabled: true,
