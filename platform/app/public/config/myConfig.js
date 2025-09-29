@@ -2,7 +2,7 @@
 
 window.config = {
   name: 'config/default.js',
-  routerBasename: null,
+  routerBasename: '/ohif',
   // whiteLabeling: {},
   extensions: [],
   modes: [],
@@ -27,23 +27,6 @@ window.config = {
   },
   investigationalUseDialog: {
     option: 'never',
-  },
-  whiteLabeling: {
-    createLogoComponentFn: function (React) {
-      return React.createElement(
-        'a',
-        {
-          target: '_self',
-          rel: 'noopener noreferrer',
-          className: 'text-purple-600 line-through',
-          href: '/',
-        },
-        React.createElement('img', {
-          src: './asthra-logo.svg',
-          className: 'w-48 h-48',
-        })
-      );
-    },
   },
   // filterQueryParam: false,
   // Defines multi-monitor layouts
@@ -107,7 +90,7 @@ window.config = {
       ],
     },
   ],
-  defaultDataSourceName: 'orthanc',
+  defaultDataSourceName: 'ohif',
   /* Dynamic config allows user to pass "configUrl" query string this allows to load config without recompiling application. The regex will ensure valid configuration source */
   // dangerouslyUseDynamicConfig: {
   //   enabled: true,
@@ -235,9 +218,9 @@ window.config = {
       configuration: {
         friendlyName: 'local Orthanc DICOMWeb Server',
         name: 'DCM4CHEE',
-        wadoUriRoot: 'http://localhost:8042/wado',
-        qidoRoot: 'http://localhost:8042/dicom-web',
-        wadoRoot: 'http://localhost:8042/dicom-web',
+        wadoUriRoot: 'http://localhost/pacs/dicom-web',
+        qidoRoot: 'http://localhost/pacs/dicom-web',
+        wadoRoot: 'http://localhost/pacs/dicom-web',
         qidoSupportsIncludeField: true,
         supportsReject: true,
         dicomUploadEnabled: true,
